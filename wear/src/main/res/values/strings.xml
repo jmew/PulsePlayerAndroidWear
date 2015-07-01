@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pulse Player</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="songs">Songs</string>
+    <string name="artists">Artists</string>
+    <string name="playlists">Playlists</string>
+    <string name="pulse">Pulse Playlist</string>
+</resources>
