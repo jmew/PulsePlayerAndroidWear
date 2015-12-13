@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="uwaterloo.ca.wearplayer" >
+    package="jmew.ca.pulseplayer" >
 
     <uses-feature android:name="android.hardware.type.watch" />
     <uses-permission android:name="android.permission.BODY_SENSORS" />
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.DeviceDefault" >
         <activity
-            android:name=".MainActivity"
+            android:name="jmew.ca.pulseplayer.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name=".SongsActivity" >
+            android:name="jmew.ca.pulseplayer.SongsActivity" >
             <intent-filter>
                 <action android:name="uwaterloo.ca.wearplayer.SongsActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -29,7 +29,7 @@
         </activity>
 
         <activity
-            android:name=".ArtistsActivity" >
+            android:name="jmew.ca.pulseplayer.ArtistsActivity" >
             <intent-filter>
                 <action android:name="uwaterloo.ca.wearplayer.ArtistsActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -37,7 +37,7 @@
         </activity>
 
         <activity
-            android:name=".PlaylistsActivity" >
+            android:name="jmew.ca.pulseplayer.PlaylistsActivity" >
             <intent-filter>
                 <action android:name="uwaterloo.ca.wearplayer.PlaylistsActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -45,7 +45,7 @@
         </activity>
 
         <activity
-            android:name=".PulseActivity" >
+            android:name="jmew.ca.pulseplayer.PulseActivity" >
             <intent-filter>
                 <action android:name="uwaterloo.ca.wearplayer.PulseActivity" />
                 <category android:name="android.intent.category.DEFAULT" />

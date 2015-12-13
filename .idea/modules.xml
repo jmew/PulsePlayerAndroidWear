@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WearPlayer.iml" filepath="$PROJECT_DIR$/WearPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PulsePlayer.iml" filepath="$PROJECT_DIR$/PulsePlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
     </modules>

@@ -1,5 +1,25 @@
 <resources>
-    <string name="app_name">Wear Player</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Pulse Player</string>
+
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/home</item>
+        <item>@string/action_settings</item>
+    </string-array>
+
+    <string-array name="nav_drawer_icons">
+        <item>@drawable/ic_home_black</item>
+        <item>@drawable/ic_action_action_settings</item>
+    </string-array>
+
+    <string name="home">Home</string>
+    <string name="pulse">Pulse Player</string>
+    <string name="bpm">BPM</string>
+    <string name="heart_rate_instructions">Tap to begin</string>
+
 </resources>

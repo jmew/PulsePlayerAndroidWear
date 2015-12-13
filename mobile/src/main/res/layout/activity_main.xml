@@ -1,4 +1,139 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/fragment"
-    android:name="uwaterloo.ca.wearplayer.MainActivityFragment" tools:layout="@layout/fragment_main"
-    android:layout_width="match_parent" android:layout_height="match_parent" />
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/app_bar" />
+
+        </LinearLayout>
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:umanoPanelHeight="68dp">
+
+            <FrameLayout
+                android:id="@+id/container_body"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/music_control_footer"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp" >
+
+                    <ImageView
+                        android:id="@+id/album_art"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_default_album" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/track_progress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="4dp"
+                        android:layout_toEndOf="@id/album_art"
+                        app:rcBackgroundPadding="0dp"
+                        app:rcRadius="0dp"
+                        app:rcProgressColor="@color/primary"
+                        app:rcSecondaryProgressColor="@color/primary_dark"
+                        app:rcProgress="0"
+                        app:rcMax="100" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_below="@id/track_progress"
+                        android:layout_toStartOf="@+id/play_button"
+                        android:layout_toEndOf="@id/album_art"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp" >
+
+                        <TextView
+                            android:id="@+id/track_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/artist_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_below="@id/track_title"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/no_tracks_message"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="No tracks currently playing" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@id/play_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_action_av_pause" />
+
+                </RelativeLayout>
+
+                <ImageView
+                android:id="@+id/fast_forward_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/music_control_footer"
+                android:src="@drawable/ic_action_av_fast_forward" />
+
+            </RelativeLayout>
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="jmew.ca.pulseplayer.FragmentDrawer"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
